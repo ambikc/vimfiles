@@ -23,13 +23,15 @@ syntax enable
 set background=dark
 colorscheme evolution
 
-set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/.vim/vimfiles/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'powerline/powerline',  {'rtp': 'powerline/bindings/vim/'}
+Plugin 'flazz/vim-colorschemes'
+" Plugin 'itchyny/lightline.vim'
 
 call vundle#end()
 
