@@ -15,9 +15,8 @@ set lbr                         " Wrap text instead of being on one line
 set laststatus=2                " Always show statusline
 set t_Co=256                    " Use 256 colours (Use this setting only if your terminal supports 256 colours)
 set ruler
-
-" set number                    " Turn on line numbering. Turn it off with set nonu
-" set smartindent
+set number                       " Turn it off with set nonu
+set smartindent
 
 syntax enable
 set background=dark
@@ -29,11 +28,21 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'powerline/powerline',  {'rtp': 'powerline/bindings/vim/'}
+Plugin 'vim-airline/vim-airline'
 Plugin 'flazz/vim-colorschemes'
-" Plugin 'itchyny/lightline.vim'
+Plugin 'tpope/vim-fugitive'
 
 call vundle#end()
 
 " autocmd VimEnter * NERDTree
 " autocmd VimEnter * wincmd p
+
+nnoremap <silent> <F5> :!clear;python %<CR>
+"Pressing Esc and then <F5> runs the current python file
+
+highlight LineNr ctermfg=white ctermbg=black
+" Highlights the line numbers with white foreground and black background
+
+"set cursorline
+"set cursorcolumn
+"hi cursorline cterm=none term=none
